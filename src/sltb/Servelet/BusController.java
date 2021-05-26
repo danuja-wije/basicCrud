@@ -68,6 +68,9 @@ public class BusController extends HttpServlet {
 		case "UPDATE":
 			update(request, response);
 			break;
+		case "USER":
+			userView(request, response);
+			break;
 		default:
 			RequestDispatcher dispatcher = request.getRequestDispatcher("login.jsp");
 			dispatcher.forward(request, response);
@@ -135,5 +138,9 @@ public class BusController extends HttpServlet {
 			RequestDispatcher dispatcher = request.getRequestDispatcher("/View/singleBus.jsp");
 			dispatcher.forward(request, response);
 		}
+	}
+	public void userView(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		RequestDispatcher dispatcher = request.getRequestDispatcher("/View/addBus.jsp");
+		dispatcher.forward(request, response);
 	}
 }

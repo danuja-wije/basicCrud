@@ -180,12 +180,6 @@ public class BusServiceImpl implements BusService {
 
 		//declare query
 
-		System.out.println(bus.getTickPrice());
-		System.out.println(bus.getSeatAval());
-		System.out.println(bus.getRoute());
-		System.out.println(bus.getTimeAval());
-		System.out.println(bus.getType());
-		System.out.println(bus.getType());
 		
 		String sql = "UPDATE `bus` SET `ticketPrice` = '"+bus.getTickPrice()+"', `seatAval` = '"+bus.getSeatAval()+"', `rout` = '"+bus.getRoute()+"', `timeAval` = '"+bus.getTimeAval()+"', `type` = '"+bus.getType()+"' WHERE `bus`.`id` ="+bus.getId();
 

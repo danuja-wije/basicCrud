@@ -27,7 +27,6 @@ public class LoginServiceImpl implements LoginService {
 			resultSet = preparedStatement.executeQuery();
 
 			if(resultSet.next()) {
-				System.out.println("have badu");
 				return true;
 			}
 			else return false;
